@@ -1,4 +1,4 @@
-package pkg
+package types
 
 const (
 	credit = "CREDIT"

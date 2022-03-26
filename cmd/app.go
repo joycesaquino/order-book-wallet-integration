@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/joycesaquino/order-book-wallet-integration/pkg"
+	"github.com/joycesaquino/order-book-wallet-integration/pkg/types"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 
 func Handler(ctx context.Context, event events.SQSEvent) error {
 
-	var orders pkg.Orders
+	var orders types.Orders
 	for _, record := range event.Records {
 		if err := json.Unmarshal([]byte(record.Body), &orders); err != nil {
 			return err
