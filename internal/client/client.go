@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/caarlos0/env/v6"
 	"github.com/go-resty/resty/v2"
+	"github.com/joycesaquino/order-book-wallet-integration/pkg/types"
 	"log"
-	"order-book-wallet-integration/pkg"
 	"time"
 )
 
@@ -24,7 +24,7 @@ const (
 	contentTypeJson   = "application/json"
 )
 
-func (client IntegrationClient) Post(ctx context.Context, body pkg.Body) error {
+func (client IntegrationClient) Post(ctx context.Context, body types.Body) error {
 
 	resp, err := client.restyClient.
 		R().
