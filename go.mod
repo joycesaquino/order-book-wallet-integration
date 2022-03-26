@@ -1,4 +1,4 @@
-module order-book-wallet-integration
+module github.com/joycesaquino/order-book-wallet-integration
 
 go 1.16
 

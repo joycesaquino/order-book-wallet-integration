@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"order-book-wallet-integration/pkg"
+	"github.com/joycesaquino/order-book-wallet-integration/pkg"
 )
 
 func main() {
