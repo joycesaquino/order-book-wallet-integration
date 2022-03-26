@@ -6,7 +6,7 @@ import (
 	"github.com/caarlos0/env/v6"
 	"github.com/go-resty/resty/v2"
 	"log"
-	"order-book-wallet-integration/internal/types"
+	"order-book-wallet-integration/pkg"
 	"time"
 )
 
@@ -24,14 +24,14 @@ const (
 	contentTypeJson   = "application/json"
 )
 
-func (client IntegrationClient) Post(ctx context.Context, body types.Body) error {
+func (client IntegrationClient) Post(ctx context.Context, body pkg.Body) error {
 
 	resp, err := client.restyClient.
 		R().
 		SetContext(ctx).
 		SetHeader(contentTypeHeader, contentTypeJson).
 		SetBody(body).
-		Post("/api-endpoint")
+		Post("/wallet")
 
 	if err != nil {
 		return err
