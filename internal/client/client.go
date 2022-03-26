@@ -24,7 +24,7 @@ const (
 	contentTypeJson   = "application/json"
 )
 
-func (client IntegrationClient) Post(ctx context.Context, body types.Body) error {
+func (client IntegrationClient) Post(ctx context.Context, body types.Orders) error {
 
 	resp, err := client.restyClient.
 		R().
