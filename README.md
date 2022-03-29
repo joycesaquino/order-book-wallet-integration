@@ -1,3 +1,3 @@
-# Order book wallet integration
+# Wallet integration
 
 Order book wallet integration function
