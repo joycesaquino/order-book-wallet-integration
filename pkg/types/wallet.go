@@ -6,6 +6,7 @@ const (
 )
 
 type Orders []Order
+
 type Order struct {
 	Value         float64 `json:"value"`
 	Quantity      int     `json:"quantity"`
